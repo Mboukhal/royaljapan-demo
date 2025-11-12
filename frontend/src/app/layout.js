@@ -1,12 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import localFont from 'next/font/local';
+// import localFont from 'next/font/local';
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
 // });
-//
+
 // const geistMono = Geist_Mono({
 //   variable: "--font-geist-mono",
 //   subsets: ["latin"],
@@ -24,6 +24,7 @@ import localFont from 'next/font/local';
 //   display: 'swap', // Recommended for performance
 // });
 
+import Provider from '@/app/provider';
 
 
 export const metadata = {
@@ -37,9 +38,11 @@ export default function RootLayout({ children }) {
       <link rel="icon" href="/favicon.svg" sizes="any" />
 
       <body
-          // className={`${geistSans.variable} ${geistMono.variable}`}
+      // className={`${geistSans.variable} ${geistMono.variable}`}
       >
-        {children}
+        <Provider>
+          {children}
+        </Provider>
       </body>
     </html>
   );

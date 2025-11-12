@@ -2,9 +2,10 @@ import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/ui/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/auth/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/**/*.{html,js}",
+    // './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    // './src/ui/**/*.{js,ts,jsx,tsx,mdx}',
+    // './src/auth/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -16,9 +17,14 @@ const config: Config = {
       fontFamily: {
         'rubik': '"Black Ops One"'
       },
+      container: {
+        center: true,
+        padding: '40px',
+      },
+
     },
-    
+
   },
   plugins: [],
-};                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+};
 export default config

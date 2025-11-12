@@ -20,6 +20,7 @@ from firebase_admin import credentials
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+APP_VERSION = '0.0.1'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'anymail',
     'royal.api',
+    'royal.task',
 ]
 
 STRIPE_PUBLIC_KEY = 'pk_test_51PvaMkKQfMI1g1n87ugCQsYOo89kYseL4FdkLHSaajuNu1nCrcSJJE0nWoxEDkbQp3wo8m8meUn0NlIfbhUv07YG00Lp2SEk4U'
@@ -206,9 +208,6 @@ LOGIN_REDIRECT_URL = "/"
 AUTH_USER_MODEL = 'api.User'
 
 TIME_ZONE = 'Asia/Tokyo'
-USE_I18N = True
-
-USE_L10N = True
 
 USE_TZ = True
 
